@@ -1,0 +1,1124 @@
+
+
+
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>Автошкола № 1</title>
+
+    
+        
+      
+        
+<!--<link rel="stylesheet" href="reset.css"/>-->
+<link rel="stylesheet" href="style.css"/>
+
+<link href='http://fonts.googleapis.com/css?family=PT+Sans:400,400italic,700,700italic&subset=latin,cyrillic,latin-ext,cyrillic-ext' rel='stylesheet' type='text/css'>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+		
+		
+<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+        
+        
+        
+        <script src="js/lightbox-2.6.min.js"></script>
+<link href="css/lightbox.css" rel="stylesheet" />
+      
+
+
+
+
+<!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>-->
+<script src="scripts.js"></script>
+<script src="form/submitform.js"></script>
+<script type="text/javascript" src="jquery.leanModal.min.js"></script>
+
+
+<!-- Файлы CSS -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" />
+        <link rel="stylesheet" href="assets/css/styles.css" />
+        <link rel="stylesheet" href="assets/countdown/jquery.countdown.css" />
+          <!-- JavaScript -->
+		<script src="assets/countdown/jquery.countdown.js"></script>
+		<script src="assets/js/script.js"></script>  
+
+
+
+
+
+
+
+
+  <!-- JavaScript!!!!!!!!! -->
+	<!-- Add mousewheel plugin (this is optional) -->
+	<script type="text/javascript" src="lib/jquery.mousewheel-3.0.6.pack.js"></script>
+
+	<!-- Add fancyBox main JS and CSS files -->
+	<script type="text/javascript" src="source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="source/jquery.fancybox.css?v=2.1.5" media="screen" />
+
+	<!-- Add Button helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
+
+	<!-- Add Thumbnail helper (this is optional) -->
+	<link rel="stylesheet" type="text/css" href="source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" />
+    
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
+
+	<!-- Add Media helper (this is optional) -->
+	<script type="text/javascript" src="source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+
+  <!-- JavaScript -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body>
+
+
+
+
+<script type="text/javascript">
+		$(document).ready(function() {
+			
+		
+		
+$('.fancybox').fancybox();
+
+
+
+
+
+$('.fancybox').fancybox({
+'width' : '75%',
+'height' : '170%',
+'autoScale' : false,
+'transitionIn' : 'none',
+'autoSize': 'false',
+'transitionOut' : 'none',
+'type' : 'iframe' 
+ });
+		
+			
+		});
+	</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="callback" class="modal">
+	<div class="modal-box">
+		<div class="modal-title" style="color:#333;">
+			ЗАКАЗАТЬ ЗВОНОК<br />
+			<span style="color:#333;">Заполните форму и я свяжусь с вами в  2 часов</span>
+		</div>
+		<form action='' method='POST' name='form' class="orderForm" id="cfCALL">
+			<input type="text" name="name" class="input_name clientName" data-placeholder="Введите ваше имя" placeholder="Введите ваше имя" />
+		<input type="text" name="email" class="input_email clientEmail" data-placeholder="Введите ваш e-mail" placeholder="Введите ваш e-mail" />
+			<input type="text" name="phone" class="input_phone clientPhone" data-placeholder="Введите ваш телефон" placeholder="Введите ваш телефон" />
+			<input class="bttn orderSubmit zak" name="submit2" type="submit" value="">
+		</form>
+	</div>
+</div>
+
+
+
+
+<div id="byy" class="modal">
+	<div class="modal-box">
+		<div class="modal-title" style="color:#333;">
+			ЗАБРОНИРОВАТЬ АВТО<br />
+			<span style="color:#333;">Заполните форму и мы свяжемся с вами в ближайшее время</span>
+		</div>
+		<form action='' method='POST' name='form' class="orderForm" id="cfCALL">
+			<input type="text" name="name" class="input_name clientName" data-placeholder="Введите ваше имя" placeholder="Введите ваше имя" />
+		<!--	<input type="text" name="email" class="input_email clientEmail" data-placeholder="Введите ваш e-mail" placeholder="Введите ваш e-mail" />-->
+			<input type="text" name="phone" class="input_phone clientPhone" data-placeholder="Введите ваш телефон" placeholder="Введите ваш телефон" />
+			<input class="bttn orderSubmit zak" name="submit2" type="submit" value="">
+		</form>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+
+.bts{
+	position:absolute; width:54px; height:54px; margin: 400px 0 0 -54px; background:url(image/left.jpg); cursor:pointer;
+	
+	}
+	
+	
+	
+.bts:hover{
+	background-position:bottom;
+	
+	
+	}	
+	
+	
+	
+	.bts2{
+	position:absolute; width:54px; height:54px; margin: 400px 0 0 1024px; background:url(image/right.jpg); cursor:pointer;
+	
+	}
+	
+	
+	
+.bts2:hover{
+	background-position:bottom;
+	
+	
+	}
+	
+	
+	
+.convdo{
+	position:absolute; margin: 655px 0 0 424px; width:200px; height:100px; color:#fff; font-weight:bold; font-size:16px;
+	
+	}	
+
+
+.convposle{
+	position:absolute; margin: 675px 0 0 424px; width:200px; height:100px; color:#fff; font-weight:bold; font-size:24px;
+	
+	}	
+	
+	
+	
+	.pribdo{
+	position:absolute; margin: 655px 0 0 574px; width:200px; height:100px; color:#fff; font-weight:bold; font-size:16px;
+	
+	}	
+
+
+.pribposle{
+	position:absolute; margin: 675px 0 0 574px; width:200px; height:100px; color:#fff; font-weight:bold; font-size:24px;
+	
+	}	
+	
+
+
+	
+	
+	
+</style>
+
+
+  <!-- Header-->
+  <!--<div style=" width:100%; height:800px; background:url(img/c4y_flov_banner2_0.jpg) center;"><div class="wrap" >
+ <div style=" position:absolute; background:#f39200; width:400px; height:200px; margin: 500px 0 0 0; font-size:36px; color#fff; text-transform:uppercase;"> 
+  Качественный дизайн
+  </div>
+  </div></div>-->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+<!--<div class="header">
+
+
+
+<div class="wrap">
+
+
+
+
+<div class="bts"> </div>
+<div class="bts2"> </div>
+
+<div class="convdo">12% </div>
+<div class="convposle">32% </div>
+
+<div class="pribdo">12 000 </div>
+<div class="pribposle">123 000 </div>
+
+
+
+
+
+ <div class="clear" style=" height:153px;"></div>
+ 
+ 
+ 
+ 
+
+<div class="portf" style=" overflow:scroll;overflow: hidden;width:1024px; margin:0 auto; height:478px; background:#fff">
+
+
+
+<iframe id="frame" cdo="5%" cposle="12%" pdo='132 000р' pposle='530 000р' src="n2.html" width="100%" height="100%"> </iframe>
+
+
+<iframe id="p2" cdo="1%" cposle="22%" pdo='32 000р' pposle='230 000р'  src="http://mateoriginal.ru" width="100%" height="100%"> </iframe>
+
+<iframe id="p3" cdo="2%" cposle="32%" pdo='32 000р' pposle='230 000р' src="http://nike-mag.ru/" width="1024px" height="100%"> </iframe>
+
+<iframe id="p4" cdo="1%" cposle="12%" pdo='32 000р' pposle='230 000р' src="http://thesuperior.ru/tour/" width="1024px" height="100%"> </iframe>
+
+<iframe id="p5" cdo="1%" cposle="12%" pdo='32 000р' pposle='230 000р' src="http://thesuperior.ru/School/" width="1024px" height="100%"> </iframe>
+
+<iframe id="p6" cdo="1%" cposle="12%" pdo='32 000р' pposle='230 000р' src="http://thesuperior.ru/ADV/" width="1024px" height="100%"> </iframe>
+
+
+
+
+
+
+
+</div>
+
+
+ <div class="clear"></div>
+
+
+
+
+
+
+<script>
+
+
+;
+
+
+var arr=[$("#frame"),$("#p2"),$("#p3"),$("#p4"),$("#p5"),$("#p6")];
+
+var ind = 0
+
+
+
+jQuery(".bts2").click(function(){
+	
+	if(ind<5){
+
+		arr[ind].hide();
+		
+		ind++
+		
+var cdo = arr[ind].attr("cdo");
+var cposle = arr[ind].attr("cposle");		
+jQuery(".convdo").text(cdo);
+jQuery(".convposle").text(cposle);
+		
+var pdo = arr[ind].attr("pdo");
+var pposle = arr[ind].attr("pposle");		
+jQuery(".pribdo").text(pdo);
+jQuery(".pribposle").text(pposle);	
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		arr[ind].show();
+		
+		
+		}
+	
+	});
+	
+	
+	
+	
+	
+	
+	jQuery(".bts").click(function(){
+		
+		
+		if(ind>0){
+
+		arr[ind].hide();
+		
+		ind--
+		
+		var cdo = arr[ind].attr("cdo");
+var cposle = arr[ind].attr("cposle");		
+jQuery(".convdo").text(cdo);
+jQuery(".convposle").text(cposle);
+		
+var pdo = arr[ind].attr("pdo");
+var pposle = arr[ind].attr("pposle");		
+jQuery(".pribdo").text(pdo);
+jQuery(".pribposle").text(pposle);	
+		arr[ind].show();}
+	
+	});
+	
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+</div>
+ 
+</div>-->
+
+  
+  
+  
+  
+  <style>
+  
+	  
+	  
+	   .textb{
+	 
+ font-size:44px; color:#fff; text-align:center; position:absolute; width:100%; height:100%;top:50%; margin-top:-40px;
+	  
+	  }
+	  
+	  
+	  
+	  
+	  .port{
+		  -moz-user-select: -moz-none;
+-o-user-select: none;
+-khtml-user-select: none;
+-webkit-user-select: none;
+user-select: none;
+cursor:pointer;
+		  
+		  
+		  }
+	  
+	  
+	  
+  .blues{
+	 
+ position:absolute;
+ background:#26CCFF; 
+ opacity:0.7;
+ width:100%;
+ height:100%;
+ cursor:pointer;
+	  
+	  }
+  
+  </style>
+  
+  
+  <div style="width:100%; height:300px; background:url(img/bg.jpg) center top;">
+  
+  <div class="wrap"> 
+  
+ <!--   
+  <div style="width:195px; height:152px; background:url(img/supra.jpg) center no-repeat; margin:0 auto;"></div>-->
+  
+     <div class="clear" style=" height:130px;"></div>
+  
+   <div style="width:100%; text-align:center; font-size:54px; color:#fff; font-weight:bold;">THE SUPERIOR</div>
+      <div style="width:100%; text-align:center; font-size:18px; color:#fff; margin-top:-15px;">мы воплощаем идеи в реальность</div>
+   
+   
+  
+       <div class="clear" style=" height:30px;"></div>
+  
+  
+  
+  <h3>Детально продуманная и идеально выполненная
+реклама вашего бизнеса в интернете</h3>
+  
+  <div class="clear" style=" height:1px; background:#999; margin-top:-50px;"></div>
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <div class="clear" style=" height:140px;"></div>
+  
+  
+  
+  
+  <div style="width:100%; background:url(img/texno.jpg) center; height:297px;"> </div>
+  
+  <div class="clear" style=" height:20px;"></div>
+  
+  
+  
+  <div style="font-size:38px; font-weight:bold; color:#333; text-align:center;"> У этих людей ваши деньги, а у Вас их товар.</div>
+  
+  
+  
+  <div style="font-size:38px; font-weight:bold; color:#FF0004; text-align:center;">Мы поможем вам обменяться!</div>
+  
+  
+  
+   <div id="morepeople" style="width:100%; background:url(img/people.jpg) center no-repeat; height:376px;"> </div>
+
+
+  
+    <div class="clear" style=" height:20px;"></div>
+  
+   <!-- Wrap-->
+  <div class="wrap">
+    <!-- Wrap-->
+  
+  
+  
+  
+  
+<div  id="vorl" style="width:340px; float:left; background:url(img/voronkal.jpg) center no-repeat; height:334px;"> </div>
+  
+  
+  
+  
+  
+  <div id="vor" style="width:252px; float:left; background:url(img/voronka.jpg) center no-repeat; height:334px; margin-left:40px;"> 
+
+  <div id="vorman" style="width:63px; margin:0 auto; background:url(img/vorman.png) center no-repeat; height:84px;"> </div>
+
+
+</div>
+  
+  
+  
+  
+  
+  <!-- Правая сторона 1 -->
+  
+<div id="vorr" style="width:389px; float:right;height:334px;"> 
+
+
+<div style=" margin-top:55px; text-align:right;font-size:27px; color:#de3939; font-weight:bold; text-transform:uppercase;">Мы знаем как найти <br>ваших клиентов!</div>
+
+
+
+<div style="text-align:right;font-size:24px; color:#b1b1b1; font-weight:bold; text-transform:uppercase;">20/1 </div>
+
+ <div class="clear" style=" height:5px;"></div>
+
+<div style="text-align:left;font-size:24px; color:#fff; font-weight:bold; text-transform:uppercase; background:#de3939; padding:10px;">ГАРАНТИРУЕМ: <br>
+<div style="font-size:18px; font-weight:normal; text-transform:none;">Из 20 клиентов увидевших рекламную компанию 1 человек зайдет на сайт!</div>
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+  
+  
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+   <!-- Wrap-->
+   </div>
+   <!-- Wrap-->
+  
+  
+  
+  
+  <script>
+  
+ 
+  
+  
+  
+jQuery("#vor").animate({"opacity":0}, 3);	
+jQuery("#vorr").animate({"opacity":0}, 3);
+jQuery("#vorl").animate({"opacity":0}, 3);
+jQuery("#vorman").animate({"opacity":0}, 3);
+
+jQuery("#morepeople").animate({"opacity":0}, 3);
+
+
+
+
+
+
+
+
+  
+
+var scrollvor = $('#vor').offset().top - ($(window).height()/2);
+  
+
+  
+  
+$(window).scroll(function() 
+{
+	
+	
+	if  ($(window).scrollTop() == 800) 
+     {
+        
+    jQuery("#vor").animate({"opacity":1}, 500);	
+	jQuery("#vorr").delay(300).animate({"opacity":1}, 600);
+	jQuery("#vorl").delay(700).animate({"opacity":1}, 400);	
+	jQuery("#vorman").delay(500).animate({"opacity":1, marginTop:30}, 1900);	
+	
+ 	}
+	 
+	 
+	 
+	 if  ($(window).scrollTop() == 400) 
+     {        
+    jQuery("#morepeople").animate({"opacity":1}, 500);	
+ 	}
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+	 
+});
+  
+  
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+           <div class="clear" style=" height:570px;"></div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div class="wrap">
+  
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <h1>ЧТО МЫ ДЕЛАЕМ</h1>
+  
+   <div class="clear" style=" height:10px;"></div>
+  
+  
+  
+  <div style="float:left;">
+  
+  <a class="fancybox fancybox.iframe " href="http://autoschoolnn.ru/">
+  <div class="port" style="width:253px; height:500px; background:url(img/1.jpg) center; position:relative; float:left; margin:2px;"> 
+    <div class="blues"> </div>
+    <div class="textb">Автошкола
+  №1</div>
+  </div></a>
+  
+  
+  
+  
+  
+    <a class="fancybox fancybox.iframe " href="http://mateoriginal.ru/">
+  <div class="port" style="width:253px; height:500px; background:url(img/mate.jpg) center; position:relative; float:left; margin:2px;"> 
+    <div class="blues" style=" background:#1FBB00;"> </div>
+    <div class="textb">Mateoriginal
+  №1</div>
+  </div></a>
+  
+<div class="clear" style=" height:1px;"></div>
+  
+  
+     <a class="fancybox fancybox.iframe " href="http://thesuperior.ru/tour/">
+  <div class="port" style="width:506px; height:280px; background:url(img/3.jpg) center; position:relative; float:left; margin:2px;"> 
+    <div class="blues" style=" background:#1FBB00;"> </div>
+    <div class="textb">Бор-Тур
+  </div>
+  </div></a>
+  
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <div style="float:right">
+  
+   
+  <div  style="width:486px; height:280px; position:relative; float:right; margin:2px; padding-left:20px; font-size:36px; color:#FF4700;"> 
+  
+  LANDING PAGE
+  
+  
+  <div style=" font-size:18px; color:#333;"> то веб-страница рекламного характера, содержащая информацию об услуге или товаре, переход на которую осуществляется по ссылке из поискового запроса или через баннер интернет-объявления.</div>
+  
+  
+
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  <div class="clear"> </div>
+  
+  
+     <a class="fancybox fancybox.iframe " href="http://doverie52.ru/">
+  <div class="port" style="width:250px; height:500px; background:url(img/4.jpg) center; position:relative;float:right; margin:2px;"> 
+    <div class="blues" style=" background:#D01BCF;"> </div>
+    <div class="textb">Коучинг отношений
+  </div>
+  </div></a>
+  
+  
+       <a class="fancybox fancybox.iframe " href="http://doverie52.ru/">
+  <div class="port" style="width:250px; height:500px; background:url(img/4.jpg) center; position:relative;float:right; margin:2px;"> 
+    <div class="blues" style=" background:#D01BCF;"> </div>
+    <div class="textb">Коучинг отношений
+  </div>
+  </div></a>
+  
+  
+  
+  </div>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  </div>
+
+  
+  
+  
+  
+  <script>
+  
+  
+  
+  
+  
+  
+  
+  
+  $('.textb').animate({"opacity":0});
+  
+  
+   $('.blues').animate({"opacity":0});
+  
+ 
+   
+   
+   $('.port').hover(function(){   
+    $(this).children('.blues').animate({"opacity":0.8});
+	$(this).children('.textb').animate({"opacity":1});
+},function(){
+$(this).children('.blues').animate({"opacity":0});
+$(this).children('.textb').animate({"opacity":0});
+	
+})
+   
+   
+  
+  
+  </script>
+  
+  
+  
+  
+  
+  
+  
+  
+   </div>
+
+  
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+    
+    <div class="clear" style=" height:40px;"></div>
+    
+    
+    <a href="http://thesuperior.ru" target="_blank">
+    
+    <div class="btn supra" > </div>
+    </a>
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!------- footer off-------------->  
+</div>
+</div>
+<!------- footer off-------------->  
+
+
+
+
+
+
+
+
+
+<script>
+
+attrib = 'pusto';
+
+function up(el){
+	attrib = el.getAttribute("ind");
+
+	}
+
+
+
+
+
+function scroll_to_elem(elem) {
+
+var speed = 1000
+if(document.getElementById(elem)) {
+var destination = jQuery('#'+elem).offset().top;
+jQuery("html,body").animate({scrollTop: destination-70}, speed);
+}
+}
+
+
+
+
+
+
+
+
+</script>
+
+
+
+
+
+
+
+
+  
+  
+</body>
+</html>

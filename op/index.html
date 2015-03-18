@@ -1,0 +1,972 @@
+<!DOCTYPE HTML>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="UTF-8" />
+<title>Оборудование для телеинспекции труб</title>
+<meta name="viewport" content="width=1000px">
+<!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="stylesheet" href="css/style.css"/>
+<script type="text/javascript" src="lib/jquery-1.10.1.min.js"></script>
+<script src="js/jquery.maskedinput.js"></script>
+<script type="text/javascript" src="js/animate.js"></script>
+<link rel="stylesheet" href="css/animate.css"/>
+<link href='http://fonts.googleapis.com/css?family=Roboto:500,900italic,900,400italic,100,700italic,300,700,500italic,100italic,300italic,400&subset=cyrillic,cyrillic-ext,latin' rel='stylesheet' type='text/css'>
+
+<!--Лайтбокс-->
+<script src="js/lightbox-2.6.min.js"></script>
+<link href="css/lightbox.css" rel="stylesheet" />
+<script src="scripts.js"></script>
+<script src="form/submitform.js"></script>
+<script src="form/geo.js"></script>
+<script type="text/javascript" src="jquery.leanModal.min.js"></script>
+<!--karusel-->
+<script src="js/click-carousel.js"></script>
+<script type="text/javascript">
+$(function(){
+	$("#container").clickCarousel({margin: 10});	
+});
+</script>
+<!--karusel-->
+<!--ГЕОТАРГЕТИНГ-->
+<script src="http://api-maps.yandex.ru/2.0-stable/?load=package.standard&lang=ru-RU" type="text/javascript"></script>
+<script type="text/javascript" src="BitstormAnimateColor-min.js"></script>
+<script src="index.js" type="text/javascript"></script>
+<link type="text/css" rel="stylesheet" href="widget/css/rcarousel.css" />
+</head>
+<body>
+
+<!--Обратный звнок-->
+
+<div id="call3" class="modal">
+  <div class="modal-box" style="
+  width:600px; background:#fff; padding:50px;
+-moz-box-shadow: 0 0 20px #3483FD;
+-webkit-box-shadow: 0 0 20px #3483FD;
+box-shadow: 0 0 20px #3483FD;">
+    <div class="closs"  style="margin-left:596px; margin-top:-50px;"> </div>
+    <div class="modal-title" style="color:#333; font-weight:normal; ">Возникли вопросы?<br />
+      <div style="color:#222; line-height:inherit; font-size:18px; margin:0 auto; font-weight:normal;"><br />
+        Оставьте номер телефона, и мы свяжемся с вами<br>
+        что бы ответить на все вопросы</div>
+    </div>
+    <form action='' method='POST' name='form' class="orderForm" id="cfCALL">
+      <input class="clientPhone" id="phone" placeholder="Ваш номер телефона" style="margin: 0px;
+margin-bottom: 15px;
+width: 360px;
+margin-left: -60px;
+height: 55px;" />
+      <input onClick="" style="	cursor:pointer;
+	width: 390px;
+	height: 50px;
+	background:#ffd200;
+	color:#171717;
+	border:none;
+	cursor:pointer;
+     font-family: 'PT Sans Caption', sans-serif; padding:0;" 
+    class=" orderSubmit bttn22" name="submit2" type="submit" value="Перезвонить">
+    </form>
+    <span style="color:#777; font-size:14px; text-align:center; margin-left:170px;">Ваши данные останутся в безопасности</span> </div>
+</div>
+
+<!--Обратный звнок-->
+
+<div id="zakaz" class="modal">
+  <div class="modal-box" style=" width:600px; background:#fff; padding:50px;
+-moz-box-shadow: 0 0 20px #3483FD;
+-webkit-box-shadow: 0 0 20px #3483FD;
+box-shadow: 0 0 20px #3483FD;
+    
+    
+    ">
+    <div class="closs"  style="margin-left:596px; margin-top:-50px;"> </div>
+    <div id="zakaz_name" class="modal-title" style="color:#333; font-weight:normal; ">Закзать шкаф<br />
+    </div>
+    <div style="color:#222; line-height:inherit; font-size:18px; text-align:center; margin:0 auto; font-weight:normal;"><br />
+      Оставьте Ваш номер телефона, <br>
+      и мы свяжемся с вами через 12 минут</div>
+    <div class="clear" style="height:20px;"></div>
+    <form action='' method='POST' name='form' class="orderForm" id="cfCALL">
+      <input class="clientPhone" id="phone" placeholder="Ваш номер телефона" style="margin: 0px;
+margin-bottom: 15px;
+width: 360px;
+margin-left: -60px;
+height: 55px;" />
+      <input onClick="" style="	cursor:pointer;
+	width: 390px;
+	height: 50px;
+	background:#ffd200;
+	color:#171717;
+	border:none;
+	cursor:pointer;
+     font-family: 'PT Sans Caption', sans-serif; padding:0;" 
+    class=" orderSubmit bttn22" name="submit2" type="submit" value="Заказать по специальной цене">
+    </form>
+    <span style="color:#777; font-size:14px; text-align:center; margin-left:170px;">Ваши данные останутся в безопасности</span> </div>
+</div>
+
+<!--Заявка с сайта-->
+
+<div id="call4" class="modal">
+  <div class="modal-box" style=" width:600px; background:#fff; padding:50px;
+-moz-box-shadow: 0 0 20px #3483FD;
+-webkit-box-shadow: 0 0 20px #3483FD;
+box-shadow: 0 0 20px #3483FD;
+    
+    
+    ">
+    <div class="closs"  style="margin-left:596px; margin-top:-50px;"> </div>
+    <div class="modal-title" style="color:#333; font-weight:normal; ">Оставить заявку<br />
+      <div style="color:#222; line-height:inherit; font-size:18px; margin:0 auto; font-weight:normal;"><br />
+        Оставьте номер телефона, и наш менеджер перезвонит вам в течение 12 минут</div>
+    </div>
+    <form action='' method='POST' name='form' class="orderForm" id="cfCALL">
+      <input class="clientPhone" id="phone" placeholder="Ваш номер телефона" style="margin: 0px;
+margin-bottom: 15px;
+width: 360px;
+margin-left: -60px;
+height: 55px;" />
+      <input onClick="" style="	cursor:pointer;
+	width: 390px;
+	height: 50px;
+	background:#ffd200;
+	color:#171717;
+	border:none;
+	cursor:pointer;
+     font-family: 'PT Sans Caption', sans-serif; padding:0;" 
+    class=" orderSubmit bttn22" name="submit2" type="submit" value="ОСТАВИТЬ ЗАЯВКУ">
+    </form>
+    <span style="color:#777; font-size:14px; text-align:center; margin-left:170px;">Ваши данные останутся в безопасности</span> </div>
+</div>
+
+<!--Заявка с сайта--> 
+
+<!--1 экран и шапка-->
+<div id="home2" style="width:100%; height:634px;margin-top:122px; background:url(img/bg/bg1.jpg) no-repeat center;">
+
+        <header class="shapka">
+            <div class="wrap">
+          <div class="logo"><a href="#"><img src="img/logo.png"></a></div>
+          <div class="nomer_sh" >8 (800) 550-76-17</div>
+          <div style="margin:0px; padding:0px; font-size:16px;width:120px;height:50px; float:left;">Звонок по России<br>бесплатный</div>
+              <div class="red_button"><span>Заказать обратный звонок</span></div>
+              <nav>
+              <ul>
+                <li style="margin:0px;padding:0px;" onclick="scroll_to_elem('benefits')">Каталог</li>
+                <li onclick="scroll_to_elem('katalog')">Подарки</li>
+                <li onclick="scroll_to_elem('keis')">Доставка</li>
+                <li onclick="scroll_to_elem('about')">Производство</li>
+                <li onclick="scroll_to_elem('map')">Сервис центры</li>
+              </ul>
+             </nav>
+          
+          </div>
+     </header>
+     <div class="wrap">
+     <div class="c2">
+    <h1><strong>ОБОРУДОВАНИЕ ДЛЯ ТЕЛЕИНСПЕКЦИИ ТРУБ</strong></h1><br>
+    <h2>с бесплатной доставкой в Ваш город: Нижний Новгород,<br>
+    а также по всей России</h2><br><br>
+    
+    
+    </div>
+    <div class="trial_lessons">
+      
+    <form method='POST' class="orderForm" >
+    <input class="clientName" type="text" name="name" id="name" data-placeholder="Имя" placeholder=""   />
+      <input class="clientPhone" id="phone" placeholder="Телефон"  />
+      <input onClick="attrib='1 блок'" class="orderSubmit animated" name="submit2" type="submit" value="Получить бесплатную консультацию" style="font-family: 'Roboto Condensed', sans-serif;" />
+     </form>
+      
+    </div>
+  </div>
+  </div>
+  
+</div>
+<!--1 экран и шапка--> 
+
+
+<!--bul--> 
+<div id="block2" style="width:100%; height:119px;; background:url(img/bg/bg2.jpg) no-repeat center;">
+<div class="wrap">
+<div class="servises">
+        <ul>
+						<li class="s1 anim"><img src="img/79.jpg" /></li>
+						<li class="s2" style="width:20px;"><img src="img/yel_line.jpg" /></li>
+                        <li class="s3 anim"><img src="img/245.jpg" /></li>
+                        <li class="s4" style="width:20px;"><img src="img/yel_line.jpg" /></li>
+                        <li class="s5 anim"><img src="img/79.jpg" /></li>
+                        <li class="s6" style="width:20px;"><img src="img/yel_line.jpg" /></li>
+                        <li class="s7 anim"><img src="img/2.jpg" /></li>
+						
+                        </ul>
+        </div>
+</div>
+</div>
+<!--bul-->
+<!--block3-->
+<div id="block3" style="width:100%; height:844px; background:url(img/bg/bg3.jpg) no-repeat center;">
+<div class="wrap">
+
+<h1 style="padding-top:180px;"><strong>Для чего применяется наше оборудование</strong></h1><br>
+<div class="h1line"></div>
+	<div style="margin:0; padding:0;width:665px; height:391px; margin-left:360px; margin-top:20px;">
+        	<div class="spoiler_links1">Осмотреть состояние воздуховодов,<br> канализационных труб, кабель-каналов,<br> ваккумных систем, внутридомовых<br> коммуникациий</div>
+            <div class="spoiler_links2">Точно определить причину и место прорыва или<br>засора труб</div>
+            <div class="spoiler_links3">Выявить несанкционированные врезки в<br>трубопроводы</div>
+            <div class="spoiler_links4">Максимально точно составить смету на очистку<br>или ремонт трубопроводов заказчика</div>
+            <div class="spoiler_links5">Продемонстрировать заказчику результаты<br>очистки или обработки труб</div>
+            <div class="spoiler_links6">Проверить качество соединений и сварных<br> швов при монтаже коммуникаций</div>
+	</div>        
+
+</div>
+</div> 
+<!--block3-->
+<!--block4-->
+<div id="block4" style="width:100%; height:363px; background:url(img/bg/bg4.jpg) no-repeat center;">
+<div class="wrap">
+<h1 style="padding-top:30px;color:#0ca5da;"><strong>Уже работают с нашим оборудованием</strong></h1><br>
+<div class="h1lineblack"></div>
+
+ <div id="karusel" style="margin:0; padding:0;display: block;position:relative;">
+   
+    <div id="container">   	
+		<img src="img/logo/img1.jpg" alt="Cuba" style="top:15px;"/>
+		<img src="img/logo/img2.jpg" alt="Cuba" style="top:20px;"/>
+		<img src="img/logo/img3.jpg" alt="Cuba" style="top:20px;"/>
+		<img src="img/logo/img4.jpg" alt="Cuba" style="top:-30px;"/>
+		<img src="img/logo/img5.jpg" alt="Cuba" style="top:-30px;"  />
+        
+    </div><!-- container -->
+	<img id="carouselLeft" src="rightarr.jpg" alt="Left Arrow" />
+	<img id="carouselRight" src="leftarr.jpg" alt="Right Arrow" />
+</div><!-- wrapper --> 
+</div>
+</div>
+<!--block4-->
+
+<!--block5-->
+<div id="block5" style="width:100%; height:3020px; background-color:#f0f4f7;">
+<div class="wrap">
+<h1 style="padding-top:50px;color:#0ca5da;"><strong>Каталог оборудования для телеинспекции</strong></h1><br>
+<div class="h1lineblack"></div>
+<h4>Выберите подходящее для себя оборудование для телеинспекции, сравнив характеристики</h4>
+<div class="filtr"></div>
+	
+    <div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+<div class="tovar_cat">
+		<h5>TIS 01-20</h5>
+		<div class="img_tovar_cat"><img src="img/tov_1.jpg"></div>
+		<div class="price-cat">69 900</div>
+		<div class="dop">
+        	<ul>
+        		<li><img src="img/dop-1.jpg"></li>
+                <li><img src="img/dop-2.jpg"></li>
+                <li><img src="img/dop-3.jpg"></li>
+        	</ul>
+        </div>
+        <div class="chek_tov"><input type="checkbox">Добавить в сравнение</div>
+        <div class="red_button1"><span>Подробнее</span></div>
+    </div>
+    <div class="clear"></div>
+   <div style="height:54px;margin:0px;padding:0px;"> 
+   <div class="red_button2"><span>Сравнить</span></div>
+    <div class="srav">Очистить сравнение</div>
+    </div>
+    <div class="clear"style="height:50px;"></div>
+    <div class="yellow_block"><div class="yellow_block_punktir"><span class="yellow_block_abc">Остались вопросы?<strong> Звоните 8-800-550-76-17</strong></span><div class="red_button3"><span>Заказать обратный звонок</span></div></div></div>
+    
+</div></div>
+<!--block5-->
+
+<!--block6-->
+<div id="block6" style="width:100%; height:713px;; background:url(img/bg/bg5.jpg) no-repeat center;">
+<div class="wrap">
+<h1 style="padding-top:130px;"><strong>Видеобзор нашей продукции</strong></h1><br>
+<div class="h1line" style="margin-bottom:25px;"></div>
+<h4 style="font-size:22px;color:#fff;">Посмотрите видеобзор и убедитесь в качестве и полезности нашего продукта</h4>
+
+<div class="videobz">
+</div>
+<div class="videobz">
+</div>
+<div class="clear"></div>
+<div class="videobz_abc"><h4>Обзор модельного ряда TIS 03-40 и TIS 05-40</h4></div>
+<div class="videobz_abc"><h4>Обзор модельного ряда телеинспекций компании ООО «Оборудование Профессионалам»</h4></div>
+
+
+</div>
+</div>
+<!--block6-->
+
+<!--block7-->
+<div id="block7" style="width:100%; height:1200px; background-color:#fff;">
+<div class="wrap">
+<h1 style="padding-top:50px;color:#0ca5da;line-height:1;"><strong>Примеры реальной работы<br> нашего оборудования</strong></h1><br>
+<div class="h1lineblack"></div>
+<h4>Посмотрите видео, снятое нашим оборудованием в реальных условиях</h4>
+	<div class="videobz_real">
+	</div>
+	<div class="videobz_real">
+	</div>
+    <div class="videobz_real_abc"><h4>Система TIS 02 20 в передаче Квадратные метры, телеканал ОТВ</h4></div>
+<div class="videobz_real_abc"><h4>Телеинспекция труб с помощью систем TIS</h4></div>
+<div class="clear"></div>
+    <div class="videobz_real">
+	</div>
+	<div class="videobz_real">
+    </div>
+    <div class="clear"></div>
+    <div class="videobz_real_abc"><h4>Видеодиагностика вентиляционных труб</h4></div>
+<div class="videobz_real_abc"><h4>Телеинспекция труб с помощью систем TIS</h4></div>
+<div class="clear"style="height:50px;"></div>
+    <div class="yellow_block"><div class="yellow_block_punktir"><span class="yellow_block_abc">Остались вопросы?<strong> Звоните 8-800-550-76-17</strong></span><div class="red_button3"><span>Заказать обратный звонок</span></div></div></div>
+    
+</div></div>
+</div>
+</div>
+<!--block7-->
+
+
+<!--block8-->
+<div id="block8" style="width:100%; height:1032px; background:url(img/bg/bg6.jpg) no-repeat center;">
+<div class="wrap">
+<h1 style="padding-top:60px; line-height:1.2;"><strong>Города в которых уже работает<br>наше оборудование</strong></h1><br>
+<div class="h1line" style="margin-bottom:25px;"></div>
+<div class="clear"></div>
+	<div class="gor">
+    <ul>
+		<li>Калининград</li>
+		<li>Санкт-Петербург</li>
+		<li>Петрозаводск</li>
+		<li>Великий Новгород</li>
+ 		<li>Мурманск</li>
+		<li>Смоленск</li>
+		<li>Гдов</li>
+		<li>Череповец</li>
+		<li>Боровичи</li>
+		<li>Москва</li>
+		<li>Брянск</li>
+		<li>Калуга</li>
+		<li>Владимир</li>
+	</ul>
+    </div>
+    
+    <div class="gor">
+    <ul>
+		<li>Ногинск</li>
+		<li>Орёл</li>
+		<li>Кострома</li>
+		<li>Тула</li>
+ 		<li>Коломна</li>
+		<li>Нижний Новгород</li>
+		<li>Рязань</li>
+		<li>Липецк</li>
+		<li>Саров</li>
+		<li>Чебоксары</li>
+		<li>Киров</li>
+		<li>Ижевск</li>
+		<li>Нагань</li>
+	</ul>
+    </div>
+    
+     <div class="gor">
+    <ul>
+		<li>Пенза</li>
+		<li>Симферополь</li>
+		<li>Казань</li>
+		<li>Пермь</li>
+		<li>Краснодар</li>
+		<li>Тимашевск</li>
+		<li>Майкоп</li>
+		<li>Сочи</li>
+		<li>Магнитогорск</li>
+        <li>Екатеринбург</li>
+		<li>Каменск-Уральский</li>
+		<li>Трёхгорный</li>
+		<li>Сургут</li>
+ 		
+	</ul>
+    </div>
+    
+     <div class="gor">
+    <ul>
+		<li>Ставрополь</li>
+		<li>Нальчик</li>
+		<li>Славянск-на-Кубани</li>
+ 		<li>Волгоград</li>
+		<li>Ростов-на-Дону</li>
+		<li>Ахтубинск</li>
+		<li>Ульяновск</li>
+		<li>Самара</li>
+		<li>Саратов</li>
+		<li>Набережные Челны</li>
+		<li>Сарапул</li>
+		<li>Нефтекамск</li>
+        <li>Уфа</li>
+		
+	</ul>
+    </div>
+    
+     <div class="gor">
+    <ul>
+		<li>Нижневартовск</li>
+		<li>Челябинск</li>
+		<li>Курган</li>
+		<li>Тюмень</li>
+ 		<li>Тобольск</li>
+		<li>Мальково</li>
+		<li>Омск</li>
+		<li>Новосибирск</li>
+		<li>Томск</li>
+		<li>Кемерово</li>
+		<li>Красноярск</li>
+		<li>Белово</li>
+		<li>Барнаул</li>
+	</ul>
+    </div>
+    
+     <div class="gor">
+    <ul>
+		<li>Улан-Удэ</li>
+		<li>Северобайкальск</li>
+		<li>Биробиджан</li>
+		<li>Владивосток</li>
+ 		<li>Рудная Пристань</li>
+		<li>Чугуевка</li>
+		<li>Курильск</li>
+		<li>Петропаловск-Камчатский</li>
+		<li>Новокузнецк</li>
+		<li>Иркутск</li>
+		<li>Норильск</li>
+	</ul>
+    </div>
+</div>
+</div>
+<!--block8-->
+
+<!--block9-->
+<div id="block9" style="width:100%; height:1236px; background:url(img/bg/bg7.jpg) no-repeat center;">
+<div class="wrap">
+<h1 style="padding-top:70px;color:#0ca5da;line-height:1;"><strong>Комплектующие в подарок на 23 000 руб.</strong></h1><br>
+<div class="h1lineblack"></div>
+<h4>После покупки оборудования для телеинспекции у нас вам не придется ничего докупать.<br> В комплекте вы получаете все, что нужно для полноценной работы.</h4>
+<div class="complekt_cat">
+		<h5>Запасная камера</h5>
+		<div class="img_complekt_cat"><img src="img/coml_1.jpg"></div>
+		</div>
+        <div class="complekt_cat">
+		<h5>Счетчик расстояния</h5>
+		<div class="img_complekt_cat"><img src="img/coml_2.jpg"></div>
+		</div>
+        <div class="complekt_cat">
+		<h5>8Гб флеш память</h5>
+		<div class="img_complekt_cat"><img src="img/coml_3.jpg"></div>
+		</div>
+        <div class="complekt_cat">
+		<h5>Силиконовая смазка<br> для разъема</h5>
+		<div class="img_complekt_cat"><img src="img/coml_4.jpg"></div>
+		</div>
+        <div class="complekt_abc"><h4>Камера в стальном корпусе<br> с сапфировым стеклом</h4></div>
+<div class="complekt_abc"><h4>Указывает расстояние<br> до места камеры в трубе</h4></div>
+<div class="complekt_abc"><h4>Видеозапись мониторинга<br> у вас на компьютере</h4></div>
+<div class="complekt_abc"><h4>Защищает электрику<br> от попадания влаги</h4></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">21000</div></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">21000</div></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">700</div></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">390</div></div>
+<div class="clear"></div>
+        <div class="complekt_cat">
+		<h5>Защитные очки Респиратор</h5>
+		<div class="img_complekt_cat"><img src="img/coml_5.jpg"></div>
+		</div>
+        <div class="complekt_cat">
+		<h5>Прорезиненные<br> перчатки</h5>
+		<div class="img_complekt_cat"><img src="img/coml_6.jpg"></div>
+		</div>
+        <div class="complekt_cat">
+		<h5>Автомобильное<br> зарядное устройство</h5>
+		<div class="img_complekt_cat"><img src="img/coml_7.jpg"></div>
+		</div>
+        <div class="complekt_cat">
+		<h5>Ремень для переноски кейса</h5>
+		<div class="img_complekt_cat"><img src="img/coml_8.jpg"></div>
+		</div>
+        <div class="complekt_abc"><h4>Комфорт и безопасность при<br>работе</h4></div>
+<div class="complekt_abc"><h4>Удобство и комфорт при<br>работе</h4></div>
+<div class="complekt_abc"><h4>Работоспособность при<br>выезде на объект</h4></div>
+<div class="complekt_abc"><h4>Освобождает руки при<br>переноске кейса</h4></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">260</div></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">260</div></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">270</div></div>
+<div class="complekt_abc_ec"><h4>Экономия:</h4><img src="img/econom.jpg"><div class="econon_price">250</div></div>
+<div class="clear"></div>
+<div class="spis_podar">*Список подарков для каждой модели уточняйте в карточке товара и у менеджера</div>
+ <div class="yellow_block" style="margin-top:60px;"><div class="yellow_block_punktir"><span class="yellow_block_abc">Остались вопросы?<strong> Звоните 8-800-550-76-17</strong></span><div class="red_button3"><span>Заказать обратный звонок</span></div></div></div>
+</div>
+</div>
+<!--block9-->
+
+<!--block10-->
+<div id="block10" style="width:100%; height:1021px; background:url(img/bg/bg8.jpg) no-repeat center;">
+<div class="wrap">
+<h1 style="padding-top:120px; line-height:1.2;"><strong>Производство оборудования для<br> телеинспекции</strong></h1><br>
+<div class="h1line" style="margin-bottom:25px;"></div>
+<h4 style="font-size:22px;color:#fff;">Где и как производиться наше оборудование для телеинспекции</h4>
+<div class="clear"></div>
+	<div class="foto_proizv">
+		<ul>
+			<li><img src="img/proizv_1.jpg"></li>
+            <li><img src="img/proizv_1.jpg"></li>
+            <li><img src="img/proizv_1.jpg"></li>
+            <li><img src="img/proizv_1.jpg"></li>
+   		</ul>
+	</div>
+    <div class="foto_proizv">
+		<ul>
+			<li><img src="img/proizv_1.jpg"></li>
+            <li><img src="img/proizv_1.jpg"></li>
+            <li><img src="img/proizv_1.jpg"></li>
+            <li><img src="img/proizv_1.jpg"></li>
+   		</ul>
+	</div>
+    
+<div class="proizv">
+    <ul>
+		<li>Cобственное производство</li>
+		<li>Площадь цехов 1000м<sup>2</sup></li>
+		<li>60 человек персонала на производстве</li>
+		<li style="margin-top:65px;">Опыт работы директора и главного инженера<br> более 16 лет</li>
+ 		<li style="margin-top:65px;">70% оборудования поставляется в Европу<br> и США, 30% в Россию</li>
+		<li style="margin-top:60px;">500 Экземпляров оборудования в месяц</li>
+	</ul>
+    </div>
+</div></div>
+<!--block10-->
+
+<!--block11-->
+<div id="block11" style="width:100%; height:544px; background-color:#fff;">
+<div class="wrap">
+<h1 style="padding-top:70px;color:#0ca5da;line-height:1;"><strong>Как купить наше оборудование<br>для телеинспекции</strong></h1><br>
+<div class="h1lineblack"></div>
+<!--bul--> 
+
+<div class="servises_1">
+        <ul>
+						<li class="s1x anim">
+                        <img src="img/1etp.png" class="img_bul1"/>
+                        <img src="img/img_razdel.png" class="img_bul2" />
+                        <div class="bul_abc">
+                        <strong>Заявка</strong><br> Вы оставляете заявку на сайте. Менеджер перезванивает вам и уточняет заказ
+                        </div>
+                        </li>
+                        <li class="s2x anim">
+                        <img src="img/2etp.png" class="img_bul1"/>
+                        <img src="img/img_razdel.png" class="img_bul2" />
+                        <div class="bul_abc">
+                        <strong>Заявка</strong><br> Вы оставляете заявку на сайте. Менеджер перезванивает вам и уточняет заказ
+                        </div>
+                        </li>
+                        <li class="s3x anim">
+                        <img src="img/3etp.png" class="img_bul1"/>
+                        <img src="img/img_razdel.png" class="img_bul2" />
+                        <div class="bul_abc">
+                        <strong>Заявка</strong><br> Вы оставляете заявку на сайте. Менеджер перезванивает вам и уточняет заказ
+                        </div>
+                        </li>
+                        <li class="s4x anim">
+                        <img src="img/4etp.png" class="img_bul1"/>
+                        <div class="bul_abc">
+                        <strong>Заявка</strong><br> Вы оставляете заявку на сайте. Менеджер перезванивает вам и уточняет заказ
+                        </div>
+                        </li>
+		</ul>
+</div>
+</div>
+</div>
+<!--bul-->
+</div>
+</div>
+<!--block11-->
+<!--block12-->
+<div id="block12" style="width:100%; height:623px; background:url(img/bg/bg9.jpg) no-repeat center;">
+<div class="wrap">
+<h1 style="padding-top:30px; line-height:1;"><strong>К каждой системе телеинспекции <br>3 центратора в комплекте и подарок</strong></h1><br>
+<div class="h1line" style="margin-bottom:25px;"></div>
+ <div class="yellow_block" style="margin-top:390px;"><div class="yellow_block_punktir"><span class="yellow_block_abc">Остались вопросы?<strong> Звоните 8-800-550-76-17</strong></span><div class="red_button3"><span>Заказать обратный звонок</span></div></div></div>
+</div></div>
+<!--block12-->
+<!--block13-->
+<div id="block13" style="width:100%; height:813px; background:url(img/bg/bg_10.jpg) no-repeat center;">
+<div class="wrap">
+<h1 style="padding-top:70px;color:#0ca5da;line-height:1;"><strong>Бесплатная доставка</strong><br>в ваш город: Нижний Новгород и по всей России</h1><br>
+<div class="h1lineblack"></div></div>
+<div class="dostav">
+<div class="dostav1"><img src="img/dost_komp1.jpg" /></div>
+</div>
+</div>
+<!--block13-->
+
+<!--block14-->
+<div id="block14" style="width:100%; height:751px; background:url(img/bg/bg11.png) no-repeat center; position:relative; top:-125px;">
+<div class="wrap">
+<h1 style="padding-top:120px; line-height:1;"><strong>Оказываем услуги по <br>телеинспекции проводов</strong></h1><br>
+<div class="h1line" style="margin-bottom:25px;"></div>
+
+<div class="trial_lessons1">
+      
+    <form method='POST' class="orderForm" >
+    <input class="clientName" type="text" name="name" id="name" data-placeholder="Имя" placeholder=""   />
+      <input class="clientPhone" id="phone" placeholder="Телефон"  />
+      <input class="clientGorod" id="gorod" data-placeholder="Город"  />
+      <input onClick="attrib='1 блок'" class="orderSubmit animated" name="submit2" type="submit" value="Заказать услугу" style="font-family: 'Roboto Condensed', sans-serif;" />
+     </form>
+      
+    </div>
+</div></div>
+<!--block14-->
+<div id="block14" style="width:100%; height:576px; background: rgb(185,204,218);position:relative;margin-top:-130px; ">
+<div class="wrap">
+<div class="mapblock">
+          <div class="clear" style="height:10px;"></div>
+			<div style="margin-top:20px; font-size:30px; font-weight:300;color:#00c4fe;width:380px;text-align:left;margin-left:30px;">Контактная информация</div>
+            <div class="h1linebl"></div>
+                    <div class="clear" style="height:25px;"></div>
+			<div class="maploz" style="width:380px;text-align:left;margin-left:30px; font-size:16px;">2010-2015<br> <br>ООО «Оборудование профессионалам»<br>г.Новосибирск, ул. Плотинная, 2/7, оф.309<br>ИНН:5405463292<br>КПП:540501001<br><br>Наш большой интернет-магазин<br><a href="www.оборудование-профессионалам.рф">www.оборудование-профессионалам.рф</a><br><br>Тел.: 8(800) 550-76-17; 8(383) 380-76-17<br><br>Время работы (по Москве):<br>Пн-Пт с 8:00 до 17:00<br>Заявки принмаются ежедневно<br> и круглосуточно.<br><br>Напишите нам и мы быстро вам ответим. <br>E-mail:  <a href="mailto:proftechob@gmail.com"> proftechob@gmail.com</a><br>Skype:  <a href="Skype:serjakova_o?call"> serjakova_o</a></div>
+			
+			
+            
+
+		</div>
+</div></div>
+<!--block15-->
+<!--block15-->
+<!--Форма--
+     <div class="form_two  animatejqueryhover">
+      <form method='POST' class="orderForm" >
+      <input class="clientPhone" id="phone2" placeholder="Ваш номер телефона" style="margin: 0px; margin-top:650px; width: 380px;"  />
+      <input class="orderSubmit  animated" name="submit2" type="submit" value="Получить бесплатную консультацию" style="font-family: 'Roboto Condensed', sans-serif;" />
+      </form> 
+      </div> 
+ </div>
+
+  </div>
+  <div class="clear"></div>
+--Форма--> 
+
+   
+
+
+
+<!--Контакты 
+<div id="map">
+
+  <script src="http://api-maps.yandex.ru/2.1-dev/?lang=ru-RU&load=package.full" type="text/javascript"></script>
+      <style type="text/css">
+        #YMapsID {
+            width: 100%;
+			  float:left;
+            height: 500px;
+        }
+    </style>
+      <script type="text/javascript">
+ymaps.ready(function () {
+    var myMap = new ymaps.Map('YMapsID', {
+        center: [56.32492105, 43.93760454],
+        zoom: 15,
+        // Обратите внимание, что в API 2.1 по умолчанию карта создается с элементами управления.
+        // Если вам не нужно их добавлять на карту, в ее параметрах передайте пустой массив в поле controls.
+        
+    });
+
+    var myPlacemark = new ymaps.Placemark([56.32504027, 43.94700300], {
+        balloonContentBody: [
+            '<address>',
+            '<strong>ТЦ "Мебельный базар", 3 этаж</strong>',
+            '<br/>',
+            '+7 (831) 265-92-85, +7-908-727-11-79,<br>+7-903-053-37-30', 
+            '</address>'
+        ].join('')
+    }, {
+        // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+		iconImageHref: 'img/map.png',
+            // Размеры метки.
+            iconImageSize: [60, 67],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-20, -60]
+    });
+
+
+    myMap.geoObjects.add(myPlacemark);
+});
+</script>
+ <div class="hero-unit">
+        <div class="container">
+        <div id="YMapsID"></div>
+        </div>
+      </div>
+<div class="wrap">
+	<div class="mapblock">
+          <div class="clear" style="height:10px;"></div>
+			<div style="margin-top:20px; font-size:36px; font-weight:300">Контакты</div>
+            <div class="h1line"></div>
+                    <div class="clear" style="height:25px;"></div>
+			<div class="maploz">Россия, <b>г. Нижний Новгород, <br> ул. Гордеевская, д. 7А Мебельный Базар</b></div>
+			
+			<div class="maprekv2">
+				+7 (831) 265-92-85, +7-908-727-11-79,<br>+7-903-053-37-30 <br><br>
+             
+			</div>
+             <div class="h1line" style=" margin-top:-10px; margin-bottom:30px;"></div>
+            <div class="maploz">Россия,  <b>г. Городец, ул. Новая, д. 97</b></div>
+           <div class="maprekv2">+7 (83161) 9-85-70, +7-908-727-11-79,<br>+7-903-053-37-30</div>
+                 <div class="clear" style="height:10px;"></div>
+			<div class="maploz"><br>
+e-mail: mm@komandor-russia.ru</div>
+
+		</div>
+        </div>
+</div>
+Контакты--> 
+
+<!--Футер--> 
+ <div style="width:100%; background:#1e1e1e; height:282px;">
+	  <div class="wrap">  
+<div class="clearfix" style="height:55px;"></div>
+	<div class="foot_men"><ul>
+    <li><span>О нас</span></li>
+    <li><span>Наши услуги</span></li>
+    <li><span>Наши партнеры и клиенты</span></li>
+    <li><span>Наши сервисные центры</span></li>
+    </ul></div>	 
+    <div class="foot_men"><ul>
+    <li>О нашем оборудовании</li>
+    <li><span>-Принципы работы</span></li>
+    <li><span>-Преимущества</span></li>
+    <li><span>-Центраторы</span></li>
+    </ul></div>	 
+    <div class="foot_men"><ul>
+    <li><span>Гарантии</span></li>
+    <li><span>Сертификаты</span></li>
+    <li><span>Отзывы</span></li>
+    
+    </ul></div>	  
+
+
+<a href="http://superior-lab.ru" target="_blank">
+<div class="btn supra" style="margin-top:150px; margin-left:470px;" > </div></a>
+<div class="clearfix" style=" height:35px;"></div>
+</div></div>
+
+
+<!--Футер--> 
+
+
+
+
+<script>
+
+var window_height = $(window).height();
+////////////////////////////////
+function scroll_to_elem(elem) {
+var speed = 300
+if(document.getElementById(elem)) {
+var destination = jQuery('#'+elem).offset().top;
+jQuery("html,body").animate({scrollTop: destination-60}, speed);}}
+
+
+
+
+
+
+$(window).scroll(function(){	
+$('.anim').each( function() {	
+var offset = $(this).offset().top;
+var randomz = Math.random(3000)*1000;
+var this_marginTop = $(this).css('margin-top');
+var this_marginTop = parseFloat($(this).css('margin-top'));
+this_marginTop = this_marginTop-70;
+if ($(window).scrollTop() > offset-(window_height + window_height/6 ) ) {
+$(this).removeClass("anim");
+$(this).delay(randomz).animate({marginTop: this_marginTop+'px',opacity:1}, 500 );}});	
+	});
+
+$('.anim').each( function() {
+$(this).animate({"opacity":0},0);
+var this_marginTop_first = parseFloat($(this).css('margin-top'));
+this_marginTop_first = this_marginTop_first+70;
+$(this).css('margin-top',this_marginTop_first+'px');
+});
+
+
+var attrib = '';
+
+
+</script>
+
+
+
+
+</body>
+</html>

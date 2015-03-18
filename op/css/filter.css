@@ -1,0 +1,466 @@
+/* -------= mixins =------- */
+.inlineblock {
+  display: inline-block;
+  vertical-align: top;
+  zoom: 1 !ie;
+  display: inline !ie;
+}
+.clearfix {
+  *zoom: expression(this.runtimeStyle.zoom='1', this.appendChild(document.createElement('br')).style.cssText='clear:both;font:0/0 serif');
+  zoom: 1 !ie;
+}
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
+}
+
+/* -------= mixins =------- */
+
+
+
+
+/* -------= filtr block =------- */
+.filtr {
+    height: 191px;
+    width: auto;
+    background-color: #f0f4f7;
+}
+
+.filtr__inner {
+    .clearfix;
+    height: 138px;
+    width: 1023px;
+    margin-top: 27px;
+    margin-bottom: 27px;
+    background-color: #FFFFFF;
+    overflow: hidden;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+
+    box-shadow: 0 0 0 1px #eb9e5f,
+                0 0 0 2px #e54d00,
+                0 0 0 3px #f6c399;
+}
+
+.filtr__option_1 {
+    float: left;
+    margin-top: 27px;
+    height: 80px;
+    width: 205px;
+    /*background-color: red;*/
+}
+
+.filtr__option_1__inner {
+    .clearfix;
+}
+
+.filtr__option_1__caption {
+    font-size: 16px;
+    padding-left: 48px;
+}
+
+.filtr__option_1__list {
+/*    float: left;*/
+}
+
+.filtr__option_1__list ul {
+    list-style-type: none;
+    padding-right: 0;
+    padding-left: 48px;
+    margin-top: -9px;
+}
+
+.filtr__option_1__list ul li {
+    padding-right: 8px;
+    float: left;
+    font-size: 17px;
+}
+
+.filtr__option_1__list ul li a {
+    color: #f26400;
+}
+
+.link_dashed {
+    text-decoration: none;
+    border-bottom: 1px dashed #f26400;
+}
+
+.filtr__option_1__list ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
+.filtr__option_1__list ul li a:active {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
+.filtr__option_2 {
+    float: left;
+    margin-top: 27px;
+    height: 80px;
+    width: 188px;
+    border-left: 1px solid #dddddd;
+    /*background-color: orange;*/
+}
+
+.filtr__option_2__caption {
+    font-size: 16px;
+    padding-left: 20px;
+    margin-bottom: 6px;
+}
+
+.filtr__option_2__slider {
+    margin-left: 20px;
+    margin-right: 23px;
+    margin-top: 18px;
+}
+
+.filtr_op_2__range_main {
+    .clearfix;
+    padding-left: 5px;
+}
+
+.filtr__option_2__range {
+    float: left;
+    margin-top: 12px;
+}
+
+.range__text {
+    width: 34px;
+    font-size: 15px;
+    text-align: right;
+    padding-top: 2px;
+}
+.range__input {
+    width: 43px;
+    font-size: 15px;
+    border: 1px solid #fd9808;
+    border-radius: 2px;
+    -moz-border-radius: 2px;
+    -webkit-border-radius: 2px;
+    text-align: right;
+    padding-right: 2px;
+}
+
+.range__marg-left {
+    margin-left: 4px;
+}
+
+.filtr__option_3 {
+    float: left;
+    margin-top: 27px;
+    height: 80px;
+    width: 161px;
+    border-left: 1px solid #dddddd;
+    /*background-color: green;*/
+}
+
+.filtr__option_3__caption {
+    font-size: 16px;
+    padding-left: 20px;
+}
+.filtr__option_3__list ul {
+    list-style-type: none;
+    padding-right: 0;
+    padding-left: 17px;
+    margin-top: -9px;
+}
+.filtr__option_3__list ul li {
+    padding-right: 8px;
+    float: left;
+    font-size: 17px;
+}
+
+.filtr__option_3__list ul li a {
+    color: #f26400;
+}
+
+.filtr__option_3__checked {
+    color: #000000 !important;
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
+
+.filtr__option_3__list ul li a:hover {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
+.filtr__option_3__list ul li a:active {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px dashed transparent;
+}
+
+.filtr__option_4 {
+    float: left;
+    margin-top: 27px;
+    height: 80px;
+    width: 212px;
+    border-left: 1px solid #dddddd;
+    /*background-color: magenta;*/
+}
+
+.filtr__option_4__checkbox {
+    height: 18px;
+    width: 188px;
+    background-color: grey;
+    margin-bottom: 6px;
+    margin-left: 20px;
+    cursor: pointer;
+    font-size: 15px;
+    padding-left: 24px;
+}
+
+.filtr__option_4__checkbox_checked {
+    background: url(../img/filtr-checkbox.png) no-repeat 0 0;
+    background-position: 0 -18px;
+}
+
+.filtr__option_4__checkbox_unchecked {
+    background: url(../img/filtr-checkbox.png) no-repeat 0 0;
+    background-position: 0 0;
+}
+
+.filtr__option_5 {
+    float: left;
+    margin-top: 27px;
+    height: 80px;
+    width: 246px;
+    border-left: 1px solid #dddddd;
+    /*background-color: brown;*/
+}
+
+.filtr__option_5__checkbox {
+    margin-top: 16px;
+    margin-left: 20px;
+    font-size: 15px;
+    color: #f26400;
+    padding-left: 17px;
+    background: url(../img/filtr-reset.png) no-repeat 0 0;
+    background-position: 0 0;
+}
+
+.filtr__option_5__checkbox a {
+    color: #f26400;
+}
+
+.filtr__option_5__checkbox a:hover {
+    color: #f26400;
+}
+
+.filtr__option_5__checkbox a:active {
+    color: #f26400;
+}
+
+
+.filtr__button {
+	width:207px;
+	height:36px;
+	position:relative;
+	display:block;
+	margin: 0px;
+	padding: 0px;
+	margin-left: 20px;
+	margin-top: 9px;
+	-webkit-border-radius:5px;
+    -o-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    line-height:3;
+    cursor:pointer;
+    background:url(../img/filtr-button-bg.jpg) repeat-x 0 0;
+    box-shadow: 0 8px 13px 2px rgba(23, 143, 190, 0.80);
+
+}
+.filtr__button:hover {
+    background-position: 0 -36px;
+}
+.filtr__button:active {
+    background-position: 0 -72px;
+}
+
+.filtr__button span {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    left: 40px;
+    top: -10px;
+
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid transparent !important;
+    background: #f6f6f6 url("images/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
+    font-weight: bold;
+}
+
+.left-ui-handler {
+    background: #f6f6f6 url("../img/filtr-slider-left.png") 50% 50% no-repeat !important;
+}
+.right-ui-handler {
+    background: #f6f6f6 url("../img/filtr-slider-right.png") 50% 50% no-repeat !important;
+}
+
+.ui-slider-horizontal .ui-slider-handle {
+    top: -18px !important;
+    margin-left: -1px !important;
+}
+
+.ui-slider-horizontal {
+height: 5px !important;
+top: 1px !important;
+}
+
+.ui-slider .ui-slider-handle {
+    position: absolute;
+    z-index: 2;
+    width: 7px !important;
+    height: 1.2em;
+    cursor: default;
+    -ms-touch-action: none;
+    touch-action: none;
+}
+
+/* -------= filtr block =------- */
+
+
+
+/* -------= compare block =------- */
+.compare-red {
+    color: red;
+}
+.compare-green {
+    color: green;
+}
+
+.compare_table__header {
+    border-top: 2px solid #000000 !important;
+    border-bottom: 2px solid #000000 !important;
+}
+
+.compare__table table {
+    border-collapse: collapse !important;
+    border-spacing: 0px !important;
+}
+
+.compare__table td {
+    border-bottom: 1px solid #cccccc;
+
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+}
+
+.compare__table th {
+    border-bottom: 2px solid #bfbfbf;
+    border-top: 2px solid #bfbfbf;
+    /*padding-left: 0;*/
+    /*padding-right: 0;*/
+}
+
+.compare__table TD, TH {
+    padding: 3px; /* Поля вокруг содержимого ячеек */
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 15px;
+}
+
+.non__border_bottom {
+    border-bottom: 1px solid transparent !important;
+}
+
+.compare__caption_align {
+    text-align: left;
+}
+
+
+.compare__button {
+    width: 150px;
+    height: 36px !important;
+    position: relative;
+    display: block;
+    /* margin: 0px; */
+    margin-top: 18px;
+    padding: 0px;
+    margin-left: 0px;
+    border-color: transparent;
+    border: none;
+
+	-webkit-border-radius:5px;
+    -o-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    line-height:3;
+    cursor:pointer;
+    background:url(../img/filtr-button-bg.jpg) repeat-x 0 0;
+    box-shadow: 0 8px 13px 2px rgba(23, 143, 190, 0.80);
+
+}
+.compare__button:hover {
+    background-position: 0 -36px;
+}
+.compare__button:active {
+    background-position: 0 -72px;
+}
+
+.compare__button span {
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 12px;
+    font-weight: 900;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+    left: 0px;
+    top: -2px;
+
+}
+
+.compare_modal__caption {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.compare__prise_block td {
+    border-bottom: 2px solid #bfbfbf;
+    border-top: 2px solid #bfbfbf;
+}
+
+.compare__prise_block {
+    font-weight: 600;
+}
+/* -------= compare block =------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
