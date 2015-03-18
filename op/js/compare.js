@@ -105,10 +105,25 @@
             $('.compare__from_modal').on('click', app.fancyClose);
             // -- нажата кнопка заказа в модалке
 
+            // -- кнопка заказать в модалке
+            $('#from-zakaz-to-order-1').on('click', app.sendZakazToOrder1);
+            $('#from-zakaz-to-order-2').on('click', app.sendZakazToOrder2);
+            // -- кнопка заказать в модалке
+
+
         },
         // -- обработчик событий над DOM элементами на странице
 
         // -- функции вызываемые из setUpListeners ===============
+
+        // -- передача названия товара в модалку заказа
+        sendZakazToOrder1: function () {
+            $('.tovar-mane-in-order').html( app.model1 );
+        },
+        sendZakazToOrder2: function () {
+            $('.tovar-mane-in-order').html( app.model2 );
+        },
+        // -- передача названия товара в модалку заказа
 
         fancyClose: function () {
             $.fancybox.close();
@@ -370,10 +385,10 @@
 
             //-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
-            if ( app.arrFromMainArray1[7] < app.arrFromMainArray2[7] ) {
+            if ( app.arrFromMainArray1[7] > app.arrFromMainArray2[7] ) {
                 $('.cablelength1').addClass('compare-green');
                 $('.cablelength2').addClass('compare-red');
-            } else if ( app.arrFromMainArray1[7] > app.arrFromMainArray2[7] ) {
+            } else if ( app.arrFromMainArray1[7] < app.arrFromMainArray2[7] ) {
                 $('.cablelength1').addClass('compare-green');
                 $('.cablelength2').addClass('compare-red');
             } else if ( app.arrFromMainArray1[7] === app.arrFromMainArray2[7] ) {
