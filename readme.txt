@@ -1,6 +1,6 @@
 
 1) В html-разметке http://superiorcheck.ru/op/
-для блока с классом class="tovar_cat" 
+для блоков с классом class="tovar_cat" 
 http://joxi.ru/Vm6v7edfQzLlmZ
 Нужно внести следующие правки: http://joxi.ru/l2Z168eHBNvymJ
 *добавить класс для <h5 class="tovar-name">TIS 03-40</h5>
